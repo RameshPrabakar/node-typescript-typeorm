@@ -5,7 +5,7 @@
 
 **Server:** Node, Express
 
-**DataBase:** postgresSQL, typeorm
+**DataBase:** postgreSQL, typeOrm
 
 
 ## Run Locally
@@ -13,13 +13,13 @@
 Clone the project
 
 ```bash
-  git clone https://github.com/chiragmehta900/node-typescript-boilerplate-postgres
+  git clone https://github.com/RameshPrabakar/node-typescript-typeorm
 ```
 
 Go to the project directory
 
 ```bash
-  cd node-postgressql-typeorm
+  cd node-typescript-typeorm
 ```
 
 Install dependencies
@@ -54,9 +54,28 @@ To run this project, you will need to add the following environment variables to
 
 
 ## Documentation
-
-[Documentation](https://linktodocumentation)
-
+`typeORM Configuration`
+```
+{
+    "description": "TypeORM configuration file for a Node.js project using PostgreSQL as the database. This configuration specifies connection details, enables automatic schema synchronization, logging, and sets up paths for entities and CLI operations.",
+    "fields": {
+        "type": "Specifies the database type. Here, 'postgres' indicates PostgreSQL.",
+        "host": "The hostname of the database server. 'localhost' refers to the local machine.",
+        "port": "The port number on which the database server is running. Default for PostgreSQL is 5432.",
+        "username": "The username used to connect to the database.",
+        "password": "The password used to connect to the database.",
+        "database": "The name of the database to connect to.",
+        "synchronize": "If true, TypeORM will automatically synchronize the database schema with the entities each time the application runs. Not recommended for production.",
+        "logging": "Enables logging of database queries and errors.",
+        "entities": "An array of paths to the compiled entity files. Here, it points to all JavaScript files in the 'dist/entity' directory.",
+        "migrations": "An array specifying migration files. Empty in this configuration.",
+        "subscribers": "An array specifying subscriber files. Empty in this configuration.",
+        "cli": {
+            "entitiesDir": "Specifies the directory where new entity files will be created when using the TypeORM CLI."
+        }
+    }
+}
+```
 
 ## API Reference
 
